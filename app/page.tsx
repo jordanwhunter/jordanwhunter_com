@@ -1,9 +1,9 @@
-export default function Home() {
-  const text = "Jordan Hunter's portfolio"
+import { Hero } from "@/components/hero"
 
+export default function Home() {
   return (
-    <main className=''>
-      <h1>{text}</h1>
+    <main className='flex flex-col container mx-auto px-4 pb-4 pt-8'>
+      <Hero />
     </main>
   )
 }
