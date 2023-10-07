@@ -4,6 +4,8 @@ import { TypeAnimation } from 'react-type-animation';
 import Image from 'next/image';
 
 const Hero = () => {
+  const text = "Professional React | Next.js developer \nLet's build something!"
+  
   return (
     <section>
       <div className='flex max-md:flex-col items-center justify-between'>
@@ -13,7 +15,7 @@ const Hero = () => {
           transition={{ duration: 0.5 }}
           className='text-center sm:text-left'
         >
-          <h1 className='text-gray-600 pb-4 2xl: text-4xl sm:text-5xl lg:text-7xl 2xl:text-8xl lg:leading-normal font-extrabold'>
+          <h1 className='text-gray-600 pb-4 2xl: text-3xl sm:text-5xl lg:text-7xl 2xl:text-8xl lg:leading-normal font-extrabold'>
             <span className='text-transparent bg-clip-text bg-gradient-to-r from-blue-400 to-green-600'>
               Jordan W. Hunter
             </span>
@@ -22,7 +24,7 @@ const Hero = () => {
               sequence={[
                 'JavaScript Dev',
                 1000,
-                'Front End Engineer',
+                'Full Stack Engineer',
                 1000,
                 'Web Architect',
                 1000,
@@ -34,8 +36,8 @@ const Hero = () => {
               repeat={Infinity}
             />
           </h1>
-          <p className='text-gray-400 text-base sm:text-lg pb-4'>
-            Professional React | Next.js developer. Let&apos;s build something!
+          <p className='text-gray-400 text-base sm:text-lg pb-4 whitespace-pre-wrap'>
+            {text}
           </p>
         </motion.div>
 
@@ -52,6 +54,7 @@ const Hero = () => {
               className='absolute rounded-full shadow-2xl'
               width={300}
               height={300}
+              priority
             />
           </div>
         </motion.div>
