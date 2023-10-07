@@ -5,7 +5,7 @@ import Image from 'next/image';
 
 const Hero = () => {
   const text = "Professional React | Next.js developer \nLet's build something!"
-  
+
   return (
     <section>
       <div className='flex max-md:flex-col items-center justify-between'>
@@ -24,7 +24,7 @@ const Hero = () => {
               sequence={[
                 'JavaScript Dev',
                 1000,
-                'Full Stack Engineer',
+                'Full-Stack Engineer',
                 1000,
                 'Web Architect',
                 1000,
