@@ -8,27 +8,27 @@ export const MENU = {
   navigation: [
     {
       name: "Home",
-      hash: "#home",
+      href: "#home",
     },
     {
       name: "About",
-      hash: "#about",
+      href: "#about",
     },
     {
       name: "Projects",
-      hash: "#projects",
+      href: "#projects",
     },
     {
       name: "Skills",
-      hash: "#skills",
+      href: "#skills",
     },
     {
       name: "Experience",
-      hash: "#experience",
+      href: "#experience",
     },
     {
       name: "Contact",
-      hash: "#contact",
+      href: "#contact",
     },
   ],
-};
+} as const;
