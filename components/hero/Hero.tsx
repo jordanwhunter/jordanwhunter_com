@@ -1,7 +1,9 @@
 'use client'
-import { motion } from 'framer-motion';
-import { TypeAnimation } from 'react-type-animation';
-import Image from 'next/image';
+import { Button } from '@/components/ui'
+import { MENU } from '@/lib/constants'
+import { motion } from 'framer-motion'
+import { TypeAnimation } from 'react-type-animation'
+import Image from 'next/image'
 
 const Hero = () => {
   const name = 'Jordan W. Hunter'
@@ -9,37 +11,49 @@ const Hero = () => {
 
   return (
     <section>
-      <div className='flex max-md:flex-col items-center justify-between'>
+      <div className='flex flex-col md:flex-row items-center justify-between'>
         <motion.div
           initial={{ opacity: 0, scale: 0.5 }}
           animate={{ opacity: 1, scale: 1 }}
           transition={{ duration: 0.5 }}
-          className='text-center sm:text-left'
+          className='text-center md:text-left'
         >
-          <h1 className='text-gray-600 pb-4 text-3xl sm:text-5xl lg:text-7xl 2xl:text-8xl lg:leading-normal font-extrabold'>
-            <span className='text-transparent bg-clip-text bg-gradient-to-r from-blue-400 to-green-600'>
+          {/* Title */}
+          <h1 className='text-gray-600 pb-4 lg:leading-normal font-extrabold'>
+            <span className='text-transparent bg-clip-text bg-gradient-to-r from-blue-400 to-green-600 text-3xl sm:text-5xl lg:text-6xl 2xl:text-8xl '>
               {name}
             </span>
             <br />
-            <TypeAnimation
-              sequence={[
-                'JavaScript Dev',
-                1000,
-                'Full-Stack Engineer',
-                1000,
-                'Web Architect',
-                1000,
-                'Site Creator',
-                1000,
-              ]}
-              wrapper='span'
-              speed={50}
-              repeat={Infinity}
-            />
+            <div className='text-3xl md:text-4xl xl:text-6xl'>
+              <TypeAnimation
+                sequence={[
+                  'JavaScript Developer',
+                  1000,
+                  'Full-Stack Engineer',
+                  1000,
+                  'Web Architect',
+                  1000,
+                  'Site Creator',
+                  1000,
+                ]}
+                wrapper='span'
+                speed={50}
+                repeat={Infinity}
+              />
+            </div>
           </h1>
-          <p className='text-gray-400 text-base sm:text-lg pb-4 whitespace-pre-wrap'>
+
+          {/* Bio */}
+          <p className='text-gray-400 text-base sm:text-lg whitespace-pre-wrap pb-6'>
             {bio}
           </p>
+
+          {/* Buttons */}
+          <div className='grid grid-cols-2 xl:flex gap-3 lg:gap-6'>
+            {MENU.buttons.map(({ ...buttonProps }) => (
+              <Button key={buttonProps.href} {...buttonProps} />
+            ))}
+          </div>
         </motion.div>
 
         <motion.div
@@ -48,7 +62,7 @@ const Hero = () => {
           transition={{ duration: 0.5 }}
           className='pt-4 lg:pt-0'
         >
-          <div className='relative w-64 h-64 lg:w-96 lg:h-96 flex items-center justify-end'>
+          <div className='relative w-64 h-64 lg:w-96 lg:h-96 flex items-center justify-end pointer-events-none'>
             <Image
               src='/img/3d-jordan.jpg'
               alt='hero image'
@@ -61,7 +75,7 @@ const Hero = () => {
         </motion.div>
       </div>
     </section>
-  );
+  )
 }
 
 export default Hero
