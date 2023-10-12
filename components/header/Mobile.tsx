@@ -3,19 +3,23 @@ import { useState } from 'react'
 import { motion } from 'framer-motion'
 import { MENU } from '@/lib/constants'
 import { Bars3Icon, XMarkIcon } from '@heroicons/react/24/outline'
+import Link from 'next/link'
 import cn from 'classnames'
 
 const MobileHeader = () => {
   const [isOpen, setIsOpen] = useState(false)
 
-  const handleClick = () => setIsOpen(() => !isOpen);
+  const handleClick = () => setIsOpen(() => !isOpen)
 
   return (
     <motion.div
       initial={{ opacity: 0, scale: 0.5 }}
       animate={{ opacity: 1, scale: 1 }}
       transition={{ duration: 0.5 }}
-      className={cn('md:hidden w-full top-0 left-0', isOpen ? 'fixed' : 'absolute')}
+      className={cn(
+        'md:hidden w-full top-0 left-0',
+        isOpen ? 'fixed' : 'absolute'
+      )}
     >
       <motion.nav initial={false} animate={isOpen ? 'open' : 'closed'}>
         <div
@@ -30,7 +34,7 @@ const MobileHeader = () => {
         </div>
 
         <motion.div
-          className='h-36 bg-white'
+          className='h-[139px] bg-gradient-to-r from-blue-400 to-green-600 !rounded-none'
           variants={{
             open: {
               clipPath: 'inset(0% 0% 0% 0% round 10px)',
@@ -54,17 +58,34 @@ const MobileHeader = () => {
           style={{ pointerEvents: isOpen ? 'auto' : 'none' }}
         >
           <div className='flex justify-end px-4 pt-2 pb-1'>
-            <button onClick={handleClick} className='w-7 h-7 text-blue-500'>
+            <button onClick={handleClick} className='w-7 h-7 text-blue-600'>
               <XMarkIcon />
             </button>
           </div>
 
-          {/* TODO: Mobile Links Below */}
-          <div className='grid grid-cols-3'></div>
+          <ul className='grid grid-cols-3'>
+            {MENU.navigation.map((link, i) => (
+              <li key={link.href}>
+                <Link
+                  href={link.href}
+                  className={cn(
+                    'text-white flex justify-center p-3 transition border-white/10',
+                    i === 0 && 'border-r border-b',
+                    i === 1 && 'border-b',
+                    i === 2 && 'border-l border-b',
+                    i === 3 && 'border-r',
+                    i === 5 && 'border-l'
+                  )}
+                >
+                  {link.name.toUpperCase()}
+                </Link>
+              </li>
+            ))}
+          </ul>
         </motion.div>
       </motion.nav>
     </motion.div>
-  );
+  )
 }
 
 export default MobileHeader
