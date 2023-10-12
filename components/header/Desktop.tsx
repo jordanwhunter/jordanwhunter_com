@@ -7,7 +7,7 @@ const DesktopHeader = () => {
   return (
     // dark:bg-gray-950 dark:border-black/40 dark:bg-opacity-75
     <motion.div
-      className='max-md:hidden fixed top-6 left-1/2 -translate-x-1/2 rounded-full border border-white border-opacity-40 bg-white bg-opacity-40 shadow-lg shadow-black/[0.03] backdrop-blur-[0.5rem] h-[3.25rem] w-[36rem]'
+      className='hidden md:block fixed top-6 left-1/2 -translate-x-1/2 rounded-full border border-white border-opacity-40 bg-white bg-opacity-40 shadow-lg shadow-black/[0.03] backdrop-blur-[0.5rem] h-[3.25rem] w-[36rem]'
       initial={{ y: -100, x: '-50%', opacity: 0 }}
       animate={{ y: 0, x: '-50%', opacity: 1 }}
     >
@@ -29,4 +29,4 @@ const DesktopHeader = () => {
   )
 }
 
-export default DesktopHeader;
+export default DesktopHeader
