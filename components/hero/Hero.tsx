@@ -27,9 +27,9 @@ const Hero = () => {
             <div className='text-3xl md:text-4xl xl:text-6xl'>
               <TypeAnimation
                 sequence={[
-                  'JavaScript Developer',
+                  'JavaScript Dev',
                   1000,
-                  'Full-Stack Engineer',
+                  'Remote Engineer',
                   1000,
                   'Web Architect',
                   1000,
