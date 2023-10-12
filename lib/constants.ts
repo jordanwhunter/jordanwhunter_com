@@ -7,28 +7,29 @@ export const SITE_DESCRIPTION =
 export const MENU = {
   navigation: [
     {
-      name: "Home",
-      href: "#home",
+      name: 'Home',
+      href: '#home',
     },
     {
-      name: "About",
-      href: "#about",
+      name: 'About',
+      href: '#about',
     },
     {
-      name: "Projects",
-      href: "#projects",
+      name: 'Projects',
+      href: '#projects',
     },
     {
-      name: "Skills",
-      href: "#skills",
+      name: 'Skills',
+      href: '#skills',
     },
     {
-      name: "Experience",
-      href: "#experience",
+      name: 'Experience',
+      href: '#experience',
     },
     {
-      name: "Contact",
-      href: "#contact",
+      name: 'Contact',
+      href: '#contact',
     },
   ],
-} as const;
+  // 'as const' to signify to TypeScript it's readonly
+} as const
