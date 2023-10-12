@@ -1,8 +1,9 @@
-import { ArrowRightIcon } from '@heroicons/react/24/outline'
+import { ArrowRightIcon, ArrowDownTrayIcon } from '@heroicons/react/24/outline'
 import { ArrowProps, SizeProps, DirectionProps } from '@/lib/types'
 import cn from 'classnames'
 
-const sizes: SizeProps = {
+export const sizes: SizeProps = {
+  '2xl': 'w-6 sm:w-7 h-6 sm:h-7',
   xl: 'w-5 sm:w-6 h-5 sm:h-6',
   lg: 'w-4 sm:w-5 h-4 sm:h-5',
   default: 'w-4 h-4',
@@ -16,23 +17,35 @@ const directions: DirectionProps = {
   right: 'group-hover:translate-x-1',
 }
 
-type SizeKey = keyof typeof sizes
+export type SizeKey = keyof typeof sizes
 type DirectionKey = keyof typeof directions
 
-const LinkArrow = ({ caption, size, direction }: ArrowProps) => {
+const LinkArrow = ({ text, size, direction, arrow, download }: ArrowProps) => {
   const sizeInput = size as SizeKey
   const directionInput = direction as DirectionKey
   
   return (
-    <figure className='flex gap-1 shrink-0'>
-      {caption && <figcaption>{caption}</figcaption>}
-      <ArrowRightIcon
-        className={cn(
-          'translate-x-0 tranlate-y-0 transition-transform duration-300',
-          sizes[sizeInput ?? 'default'],
-          directions[directionInput ?? 'default']
-        )}
-      />
+    <figure className='flex gap-3 shrink-0 items-center'>
+      {text && <figcaption>{text}</figcaption>}
+
+      {arrow && (
+        <ArrowRightIcon
+          className={cn(
+            sizes[sizeInput ?? 'default'],
+            directions[directionInput ?? 'default']
+          )}
+        />
+      )}
+
+      {download && (
+        <ArrowDownTrayIcon
+          className={cn(
+            'translate-x-0 tranlate-y-0 transition-transform duration-300',
+            sizes[sizeInput ?? 'default'],
+            directions[directionInput ?? 'default']
+          )}
+        />
+      )}
     </figure>
   )
 }
