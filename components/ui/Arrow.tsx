@@ -40,7 +40,6 @@ const LinkArrow = ({ text, size, direction, arrow, download }: ArrowProps) => {
       {download && (
         <ArrowDownTrayIcon
           className={cn(
-            'translate-x-0 tranlate-y-0 transition-transform duration-300',
             sizes[sizeInput ?? 'default'],
             directions[directionInput ?? 'default']
           )}
