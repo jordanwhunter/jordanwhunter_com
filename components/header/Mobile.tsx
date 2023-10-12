@@ -15,10 +15,12 @@ const MobileHeader = () => {
       initial={{ opacity: 0, scale: 0.5 }}
       animate={{ opacity: 1, scale: 1 }}
       transition={{ duration: 0.5 }}
-      className='md:hidden w-full fixed top-0 left-0'
+      className={cn('md:hidden w-full top-0 left-0', isOpen ? 'fixed' : 'absolute')}
     >
       <motion.nav initial={false} animate={isOpen ? 'open' : 'closed'}>
-        <div className={cn('flex justify-end px-4 pt-2 pb-1', isOpen && 'hidden')}>
+        <div
+          className={cn('flex justify-end px-4 pt-2 pb-1', isOpen && 'hidden')}
+        >
           <motion.button
             onClick={handleClick}
             className='w-7 h-7 text-blue-500'
@@ -58,9 +60,7 @@ const MobileHeader = () => {
           </div>
 
           {/* TODO: Mobile Links Below */}
-          <div className='grid grid-cols-3'>
-
-          </div>
+          <div className='grid grid-cols-3'></div>
         </motion.div>
       </motion.nav>
     </motion.div>
