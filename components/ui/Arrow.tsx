@@ -16,10 +16,10 @@ const directions: DirectionProps = {
   right: 'group-hover:translate-x-1',
 }
 
-const LinkArrow = ({ caption, size, direction }: ArrowProps) => {
-  type SizeKey = keyof typeof sizes
-  type DirectionKey = keyof typeof directions
+type SizeKey = keyof typeof sizes
+type DirectionKey = keyof typeof directions
 
+const LinkArrow = ({ caption, size, direction }: ArrowProps) => {
   const sizeInput = size as SizeKey
   const directionInput = direction as DirectionKey
   
