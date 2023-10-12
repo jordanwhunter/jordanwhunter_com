@@ -1,4 +1,4 @@
-import { Desktop, Mobile } from '@/components/header';
+import { Desktop, Mobile } from '@/components/header'
 
 const Header = () => {
   return (
@@ -6,7 +6,7 @@ const Header = () => {
       <Mobile />
       <Desktop />
     </header>
-  );
+  )
 }
 
 export default Header
