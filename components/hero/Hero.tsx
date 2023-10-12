@@ -52,7 +52,7 @@ const Hero = () => {
             <Image
               src='/img/3d-jordan.jpg'
               alt='hero image'
-              className='absolute rounded-full shadow-2xl'
+              className='absolute rounded-full shadow-2xl border-[0.35rem] border-white'
               width={300}
               height={300}
               priority
