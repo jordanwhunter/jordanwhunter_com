@@ -5,7 +5,7 @@ export const SITE_DESCRIPTION =
 
 // Generic Button Styling
 const generic =
-  "text-gray-400 hover:text-gray-600 px-7 py-3 flex justify-center gap-3 rounded-full border border-white bg-white bg-opacity-40 shadow-lg shadow-black/[0.03]";
+  'text-gray-400 hover:text-gray-600 border-white bg-white bg-opacity-40 shadow-lg shadow-black/[0.03]'
 
 // Menu and Navigation
 export const MENU = {
@@ -45,7 +45,7 @@ export const MENU = {
       arrow: true,
       internal: true,
       classProps:
-        'bg-gradient-to-r from-blue-400 to-green-600 text-white px-7 py-3 flex justify-center gap-3 rounded-full border border-black/10',
+        'bg-gradient-to-r from-blue-400 to-green-600 text-white border-black/10',
     },
     {
       text: 'Resume',
@@ -68,5 +68,4 @@ export const MENU = {
       classProps: generic,
     },
   ],
-  // 'as const' to signify to TypeScript it's readonly
 } as const

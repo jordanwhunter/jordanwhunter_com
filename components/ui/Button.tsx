@@ -6,15 +6,23 @@ import cn from 'classnames'
 
 const Button = ({ classProps, internal, linkedin, github, ...linkProps }: ButtonProps) => {
   const sizeInput = linkProps.size as SizeKey
+  const generic = 'px-7 py-3 flex justify-center gap-3 rounded-full border'
 
   return (
     <div className='hover:scale-110'>
       {internal ? (
-        <Link href={linkProps?.href ?? '#'} className={classProps}>
+        <Link
+          href={linkProps?.href ?? '#'}
+          className={cn(classProps, generic)}
+        >
           <LinkArrow {...linkProps} />
         </Link>
       ) : (
-        <a href={linkProps?.href} target='_blank' className={classProps}>
+        <a
+          href={linkProps?.href}
+          target='_blank'
+          className={cn(classProps, generic)}
+        >
           {linkProps.download ? (
             <LinkArrow {...linkProps} />
           ) : (
