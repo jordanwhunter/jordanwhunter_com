@@ -1,3 +1,10 @@
+import { ReactNode, MouseEventHandler } from 'react'
+
+// @/components/content/Heading.tsx
+export interface SectionHeadingProps {
+  children: ReactNode;
+}
+
 // @/components/ui/Arrow.tsx
 export interface ArrowProps {
   text?: string;
@@ -8,7 +15,7 @@ export interface ArrowProps {
 }
 
 export interface SizeProps {
-  '2xl': string;
+  "2xl": string;
   xl: string;
   lg: string;
   default: string;
@@ -34,4 +41,11 @@ export interface ButtonProps {
   linkedin?: boolean;
   github?: boolean;
   classProps?: string;
+}
+
+// @/components/ui/Tab.tsx
+export interface TabProps {
+  active?: boolean;
+  selectTab?: MouseEventHandler<HTMLElement>;
+  children?: ReactNode;
 }
