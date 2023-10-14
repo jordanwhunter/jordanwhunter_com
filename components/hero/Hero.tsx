@@ -11,12 +11,12 @@ const Hero = () => {
 
   return (
     <section>
-      <div className='flex flex-col md:flex-row items-center justify-between'>
+      <div className='flex flex-col lg:flex-row items-center lg:gap-10 xl:gap-36'>
         <motion.div
           initial={{ opacity: 0, scale: 0.5 }}
           animate={{ opacity: 1, scale: 1 }}
           transition={{ duration: 0.5 }}
-          className='text-center md:text-left'
+          className='text-center lg:text-left'
         >
           {/* Title */}
           <h1 className='text-gray-600 pb-4 lg:leading-normal font-extrabold'>
@@ -62,7 +62,7 @@ const Hero = () => {
           transition={{ duration: 0.5 }}
           className='pt-4 lg:pt-0'
         >
-          <div className='relative w-64 h-64 lg:w-96 lg:h-96 flex items-center justify-end pointer-events-none'>
+          <div className='relative w-64 h-64 lg:w-96 lg:h-96 flex items-center pointer-events-none'>
             <Image
               src='/img/3d-jordan.jpg'
               alt='hero image'
