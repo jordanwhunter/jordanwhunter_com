@@ -52,7 +52,7 @@ const About = () => {
           </TabButton>
         </div>
 
-        <div className='mt-8'>
+        <div className='mt-4 lg:mt-8'>
           {MENU.tabs.find((t) => t.id === tab)!.content}
         </div>
       </div>
