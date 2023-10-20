@@ -3,11 +3,11 @@ import { motion } from 'framer-motion'
 import cn from 'classnames'
 
 const TabButton = ({ active, selectTab, children}: TabProps) => {
-  const buttonClasses = active ? 'text-white' : 'text-[#ADB7BE]'
+  const buttonClasses = active ? 'text-gray-500' : 'text-gray-400'
 
   return (
     <button onClick={selectTab}>
-      <p className={cn(buttonClasses, 'pr-3 font-semibold hover:text-white')}>
+      <p className={cn(buttonClasses, 'pr-3 font-semibold hover:text-gray-600')}>
         {children}
       </p>
       <motion.div
@@ -16,8 +16,7 @@ const TabButton = ({ active, selectTab, children}: TabProps) => {
           default: { width: 0 },
           active: { width: 'calc(100% - 0.75rem)' },
         }}
-        className='h-1 bg-primary-500 mt-2 mr-3'
-      ></motion.div>
+      />
     </button>
   )
 }
