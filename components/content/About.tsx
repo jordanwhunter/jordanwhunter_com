@@ -60,7 +60,7 @@ const About = () => {
       <Image
         src='/img/office.jpg'
         alt='about image'
-        className='rounded-xl lg:order-1 shadow-2xl border-[0.35rem] border-white pointer-events-none lg:flex justify-end w-full mt-4 lg:mt-0'
+        className='rounded-xl lg:order-1 shadow-2xl border-[0.35rem] border-white pointer-events-none lg:flex mx-auto justify-end lg:w-full mt-4 lg:mt-0'
         width={300}
         height={300}
         priority
