@@ -74,22 +74,21 @@ export const MENU = {
       title: 'Skills',
       id: 'skills',
       content: (
-        <ul className='list-disc pl-2'>
-          <li>JavaScript</li>
-          <li>TypeScript</li>
-          <li>React</li>
-          <li>Next.js</li>
-          <li>Tailwind CSS</li>
-          <li>HTML5</li>
-          <li>Prismic CRM</li>
-          <li>Prisma ORM</li>
-          <li>NextAuth.js</li>
-          <li>Node.js</li>
-          <li>Express</li>
-          <li>PostgreSQL</li>
-          <li>Supabase</li>
-          <li>PlanetScale</li>
-          <li>MongoDB</li>
+        <ul className='list-disc pl-2 text-gray-400 leading-tight grid grid-cols-2 text-center lg:text-left max-sm:px-2'>
+          <div>
+            <li>React | Next.js</li>
+            <li>JavaScript</li>
+            <li>TypeScript</li>
+            <li>Tailwind CSS</li>
+            <li>Prismic CRM</li>
+          </div>
+          <div>
+            <li>Prisma ORM</li>
+            <li>Node.js</li>
+            <li>Express</li>
+            <li>PostgreSQL</li>
+            <li>MongoDB</li>
+          </div>
         </ul>
       ),
     },
@@ -97,9 +96,13 @@ export const MENU = {
       title: 'Education',
       id: 'education',
       content: (
-        <ul className='list-disc pl-2'>
-          <li>Columbia University</li>
-          <li>University of South Florida</li>
+        <ul className='list-disc pl-2 text-center lg:text-left text-gray-400 leading-tight'>
+          <li>
+            Columbia University <span className='font-bold'>(CU)</span>
+          </li>
+          <li>
+            University of South Florida <span className='font-bold'>(USF)</span>
+          </li>
         </ul>
       ),
     },
@@ -107,7 +110,7 @@ export const MENU = {
       title: 'Awards',
       id: 'awards',
       content: (
-        <ul className='list-disc pl-2'>
+        <ul className='list-disc pl-2 text-center lg:text-left text-gray-400 leading-tight'>
           <li>CU Flame of Ambition Award</li>
           <li>CU Top Voted Projects Award</li>
           <li>Sigma Alpha Lambda Honor Society</li>
@@ -120,13 +123,31 @@ export const MENU = {
       title: 'Certifications',
       id: 'certifications',
       content: (
-        <ul className='list-disc pl-2'>
-          <li>LinkedIn Skill Assessment - React (top 5%)</li>
-          <li>LinkedIn Skill Assessment - HTML5 (top 5%)</li>
-          <li>LinkedIn Skill Assessment - CSS3 (top 5%)</li>
-          <li>LinkedIn Skill Assessment - MongoDB (top 5%)</li>
-          <li>LinkedIn Skill Assessment - Front-End Development (top 15%)</li>
-          <li>LinkedIn Skill Assessment - JavaScript (top 30%)</li>
+        <ul className='list-disc pl-2 text-center lg:text-left text-gray-400 leading-tight'>
+          <li>
+            LinkedIn Skill Assessment - React{' '}
+            <span className='font-bold'>(top 5%)</span>
+          </li>
+          <li>
+            LinkedIn Skill Assessment - HTML5{' '}
+            <span className='font-bold'>(top 5%)</span>
+          </li>
+          <li>
+            LinkedIn Skill Assessment - CSS3{' '}
+            <span className='font-bold'>(top 5%)</span>
+          </li>
+          <li>
+            LinkedIn Skill Assessment - MongoDB{' '}
+            <span className='font-bold'>(top 5%)</span>
+          </li>
+          <li>
+            LinkedIn Skill Assessment - Front-End Development{' '}
+            <span className='font-bold'>(top 15%)</span>
+          </li>
+          <li>
+            LinkedIn Skill Assessment - JavaScript{' '}
+            <span className='font-bold'>(top 30%)</span>
+          </li>
         </ul>
       ),
     },
