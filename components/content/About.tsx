@@ -21,7 +21,7 @@ const About = () => {
       <div className='lg:order-2'>
         <SectionHeading>About Me</SectionHeading>
         <Bio />
-        <div className='flex flex-row justify-start mt-8'>
+        <div className='flex justify-center lg:justify-start mt-8'>
           <TabButton
             selectTab={() => handleTabChange('skills')}
             active={tab === 'skills'}
@@ -52,15 +52,15 @@ const About = () => {
           </TabButton>
         </div>
 
-        {/* TODO: Make this look nice */}
         <div className='mt-8'>
           {MENU.tabs.find((t) => t.id === tab)!.content}
         </div>
       </div>
+
       <Image
         src='/img/office.jpg'
         alt='about image'
-        className='rounded-xl lg:order-1 shadow-2xl border-[0.35rem] border-white pointer-events-none lg:flex justify-end w-full'
+        className='rounded-xl lg:order-1 shadow-2xl border-[0.35rem] border-white pointer-events-none lg:flex justify-end w-full mt-4 lg:mt-0'
         width={300}
         height={300}
         priority
