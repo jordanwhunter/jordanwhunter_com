@@ -1,4 +1,5 @@
 import { ReactNode, MouseEventHandler } from 'react'
+import { MENU } from "@/lib/constants"
 
 // @/components/content/Heading.tsx
 export interface SectionHeadingProps {
@@ -49,3 +50,6 @@ export interface TabProps {
   selectTab?: MouseEventHandler<HTMLElement>;
   children?: ReactNode;
 }
+
+// @/components/cards/Card.tsx
+export type CardProps = (typeof MENU.projects)[number]
