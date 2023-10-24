@@ -4,6 +4,7 @@ import { MENU } from "@/lib/constants"
 // @/components/content/Heading.tsx
 export interface SectionHeadingProps {
   children: ReactNode;
+  classProps?: string;
 }
 
 // @/components/ui/Arrow.tsx
