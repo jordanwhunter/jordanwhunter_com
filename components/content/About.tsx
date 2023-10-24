@@ -17,15 +17,17 @@ const About = () => {
   }
 
   return (
-    <motion.section 
+    <motion.section
       id='about'
-      className='grid lg:grid-cols-2 lg:gap-24 w-full' 
+      className='grid lg:grid-cols-2 lg:gap-24 w-full scroll-mt-16 sm:scroll-mt-24 lg:scroll-mt-28'
       initial={{ opacity: 0, y: 100 }}
-      animate={{ opacity: 1, y:0 }}
+      animate={{ opacity: 1, y: 0 }}
       transition={{ delay: 0.175 }}
     >
       <div className='lg:order-2'>
-        <SectionHeading>About Me</SectionHeading>
+        <SectionHeading classProps=' text-center lg:text-left'>
+          About Me
+        </SectionHeading>
         <Bio />
         <div className='flex justify-center lg:justify-start mt-8'>
           <TabButton
