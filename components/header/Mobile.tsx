@@ -76,6 +76,7 @@ const MobileHeader = () => {
                     i === 3 && 'border-r',
                     i === 5 && 'border-l'
                   )}
+                  onClick={handleClick}
                 >
                   {link.name.toUpperCase()}
                 </Link>
