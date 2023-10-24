@@ -17,7 +17,13 @@ const About = () => {
   }
 
   return (
-    <section className='grid lg:grid-cols-2 lg:gap-24 w-full' id='about'>
+    <motion.section 
+      id='about'
+      className='grid lg:grid-cols-2 lg:gap-24 w-full' 
+      initial={{ opacity: 0, y: 100 }}
+      animate={{ opacity: 1, y:0 }}
+      transition={{ delay: 0.175 }}
+    >
       <div className='lg:order-2'>
         <SectionHeading>About Me</SectionHeading>
         <Bio />
@@ -44,11 +50,11 @@ const About = () => {
             Awards{' '}
           </TabButton>
           <TabButton
-            selectTab={() => handleTabChange('certifications')}
-            active={tab === 'certifications'}
+            selectTab={() => handleTabChange('assessments')}
+            active={tab === 'assessments'}
           >
             {' '}
-            Certifications{' '}
+            Assessments{' '}
           </TabButton>
         </div>
 
@@ -60,12 +66,12 @@ const About = () => {
       <Image
         src='/img/office.jpg'
         alt='about image'
-        className='rounded-xl lg:order-1 shadow-2xl border-[0.35rem] border-white pointer-events-none lg:flex mx-auto justify-end lg:w-full mt-4 lg:mt-0'
+        className='rounded-xl lg:order-1 shadow-2xl border-[0.35rem] border-white pointer-events-none lg:flex mx-auto justify-end lg:w-full mt-4 lg:mt-0 hidden'
         width={300}
         height={300}
         priority
       />
-    </section>
+    </motion.section>
   )
 }
 
