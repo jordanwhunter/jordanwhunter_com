@@ -1,5 +1,5 @@
 import { Hero } from '@/components/hero'
-import { SectionDivider, About, Projects } from '@/components/content'
+import { SectionDivider, About, Projects, Skills } from '@/components/content'
 
 export default function Home() {
   return (
@@ -9,6 +9,8 @@ export default function Home() {
       <About />
       <SectionDivider />
       <Projects />
+      <SectionDivider />
+      <Skills />
       <SectionDivider />
     </main>
   );
