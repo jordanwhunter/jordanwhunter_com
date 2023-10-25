@@ -1,5 +1,5 @@
 import { ArrowRightIcon, ArrowDownTrayIcon } from '@heroicons/react/24/outline'
-import { ArrowProps, SizeProps, DirectionProps } from '@/lib/types'
+import type { ArrowProps, SizeProps, DirectionProps } from '@/lib/types'
 import cn from 'classnames'
 
 export const sizes: SizeProps = {

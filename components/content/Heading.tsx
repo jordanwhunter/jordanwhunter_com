@@ -1,4 +1,4 @@
-import { SectionHeadingProps } from '@/lib/types'
+import type { SectionHeadingProps } from '@/lib/types'
 import cn from 'classnames'
 
 const SectionHeading = ({ classProps, children }: SectionHeadingProps) => (

@@ -1,4 +1,4 @@
-import { TabProps } from '@/lib/types'
+import type { TabProps } from '@/lib/types'
 import { motion } from 'framer-motion'
 import cn from 'classnames'
 

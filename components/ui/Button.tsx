@@ -1,4 +1,4 @@
-import { ButtonProps } from '@/lib/types'
+import type { ButtonProps } from '@/lib/types'
 import { LinkArrow, sizes, SizeKey } from '@/components/ui'
 import { AiFillLinkedin, AiFillGithub } from 'react-icons/ai'
 import Link from 'next/link'

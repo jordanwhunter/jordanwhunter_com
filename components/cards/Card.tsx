@@ -1,6 +1,6 @@
 'use client'
 import { useRef } from 'react'
-import { CardProps } from '@/lib/types'
+import type { CardProps } from '@/lib/types'
 import { CodeBracketIcon, EyeIcon } from '@heroicons/react/24/outline'
 import { motion, useScroll, useTransform } from 'framer-motion'
 import Image from 'next/image'
