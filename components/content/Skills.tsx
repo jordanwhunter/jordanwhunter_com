@@ -35,7 +35,7 @@ const Skills = () => {
         {MENU.skills.map((skill, i) => (
           <motion.li 
             key={skill}
-            className='bg-white border border-black/[0.1] rounded-xl px-5 py-3 shadow-md'
+            className='bg-white border border-black/[0.1] rounded-xl px-3 py-2 shadow-md'
             variants={fadeInAnimation}
             initial='initial'
             whileInView='animate'
