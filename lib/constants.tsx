@@ -17,7 +17,7 @@ const genericButton =
 
 // Generic Tab Styling
 const genericTab =
-  "list-disc pl-2 text-center lg:text-left text-gray-400 leading-tight";
+  "text-center lg:text-left text-gray-400 leading-tight";
 
 // Menu and Navigation
 export const MENU = {
