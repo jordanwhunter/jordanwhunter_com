@@ -34,13 +34,13 @@ const About = () => {
           About Me
         </SectionHeading>
         <Bio />
-        <div className='flex justify-center lg:justify-start mt-8 max-sm:pl-1'>
+        <div className='flex justify-center lg:justify-start mt-8'>
           <TabButton
             selectTab={() => handleTabChange('technologies')}
             active={tab === 'technologies'}
           >
             {' '}
-            Technologies{' '}
+            Tech{' '}
           </TabButton>
           <TabButton
             selectTab={() => handleTabChange('education')}
