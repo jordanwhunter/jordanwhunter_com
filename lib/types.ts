@@ -1,4 +1,4 @@
-import { ReactNode, MouseEventHandler } from 'react'
+import { ReactNode, MouseEventHandler, Dispatch, SetStateAction } from 'react'
 import { MENU } from "@/lib/constants"
 
 // @/components/content/Heading.tsx
@@ -54,3 +54,23 @@ export interface TabProps {
 
 // @/components/cards/Card.tsx
 export type CardProps = (typeof MENU.projects)[number]
+
+// @/context/Active.tsx
+export interface ActiveContextProviderProps {
+  children: ReactNode;
+}
+
+export type ActiveSectionProps = (typeof MENU.navigation[number]['name'])
+
+export interface ActiveSectionContextProps {
+  activeSection: ActiveSectionProps
+  setActiveSection: Dispatch<SetStateAction<ActiveSectionProps>>
+  timeOfLastClick: number
+  setTimeOfLastClick: Dispatch<SetStateAction<number>>
+}
+
+// @/lib/hooks/useSectionInView.ts
+export interface SectionInViewProps {
+  sectionName: ActiveSectionProps;
+  threshold: number;
+}
