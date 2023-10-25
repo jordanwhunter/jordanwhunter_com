@@ -1,6 +1,3 @@
-// Dependencies
-import cn from "classnames";
-
 // Project Images
 import website from "@/public/img/projects/website.png";
 import amazone from "@/public/img/projects/amazone.png";
@@ -86,25 +83,16 @@ export const MENU = {
 
   tabs: [
     {
-      title: "Skills",
-      id: "skills",
+      title: "Technologies",
+      id: "technologies",
       content: (
-        <div className={cn("grid grid-cols-2 max-sm:px-2", genericTab)}>
-          <ul>
-            <li>React | Next.js</li>
-            <li>JavaScript</li>
-            <li>TypeScript</li>
-            <li>Tailwind CSS</li>
-            <li>Prismic CRM</li>
-          </ul>
-          <ul>
-            <li>Prisma ORM</li>
-            <li>Node.js</li>
-            <li>Express</li>
-            <li>PostgreSQL</li>
-            <li>MongoDB</li>
-          </ul>
-        </div>
+        <ul className={genericTab}>
+          <li>React | Next.js</li>
+          <li>JavaScript</li>
+          <li>TypeScript</li>
+          <li>Tailwind CSS</li>
+          <li>Node.js</li>
+        </ul>
       ),
     },
     {
