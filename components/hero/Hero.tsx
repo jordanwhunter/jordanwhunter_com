@@ -1,4 +1,5 @@
 'use client'
+import { useSectionInView } from '@/lib/hooks'
 import { Button } from '@/components/ui'
 import { MENU } from '@/lib/constants'
 import { motion } from 'framer-motion'
@@ -9,8 +10,10 @@ const Hero = () => {
   const name = 'Jordan W. Hunter'
   const bio = "Professional React | Next.js developer \nLet's build something!"
 
+  const { ref } = useSectionInView({ sectionName: "Home", threshold: 0.5 })
+
   return (
-    <section>
+    <section id='home' ref={ref} className='scroll-mt-28'>
       <div className='flex flex-col lg:flex-row items-center lg:gap-10 xl:gap-36'>
         <motion.div
           initial={{ opacity: 0, scale: 0.5 }}

@@ -1,9 +1,13 @@
 'use client'
+import { useActiveSection } from '@/lib/hooks'
 import { motion } from 'framer-motion'
 import { MENU } from '@/lib/constants'
 import Link from 'next/link'
+import cn from 'classnames'
 
 const DesktopHeader = () => {
+  const { activeSection, setActiveSection, setTimeOfLastClick } = useActiveSection()
+  
   return (
     // dark:bg-gray-950 dark:border-black/40 dark:bg-opacity-75
     <motion.div
@@ -12,12 +16,19 @@ const DesktopHeader = () => {
       animate={{ y: 0, x: '-50%', opacity: 1 }}
     >
       <nav className='fixed left-1/2 -translate-x-1/2'>
-        <ul className='flex w-[22rem] items-center justify-center gap-5 text-[0.9rem] font-medium text-gray-400'>
+        <ul className='flex w-[22rem] items-center justify-center gap-5 text-[0.9rem] mt-[0.2rem] font-medium text-gray-400'>
           {MENU.navigation.map((link) => (
             <li key={link.href}>
               <Link
                 href={link.href}
-                className='hover:text-gray-600 flex w-full justify-center p-3 transition'
+                className={cn(
+                  'hover:text-gray-600 flex w-full justify-center p-3 transition',
+                  activeSection === link.name && 'text-gray-600 bg-gray-50 rounded-full py-1'
+                )}
+                onClick={() => {
+                  setActiveSection(link.name)
+                  setTimeOfLastClick(Date.now())
+                }}
               >
                 {link.name}
               </Link>

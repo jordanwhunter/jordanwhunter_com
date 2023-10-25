@@ -1,5 +1,6 @@
 'use client'
-import { useState, useTransition, useEffect } from 'react'
+import { useState, useTransition } from 'react'
+import { useSectionInView } from '@/lib/hooks'
 import { SectionHeading, Bio } from '@/components/content'
 import { TabButton } from '@/components/ui'
 import { MENU } from '@/lib/constants'
@@ -7,7 +8,7 @@ import { motion } from 'framer-motion'
 import Image from 'next/image'
 
 const About = () => {
-  const [tab, setTab] = useState('skills')
+  const [tab, setTab] = useState('technologies')
   const [_, startTransition] = useTransition()
 
   const handleTabChange = (id: string ) => {
@@ -16,9 +17,13 @@ const About = () => {
     })
   }
 
+  // Set threshold to 90% in view before changing state. This is because 'Home' and 'About' both appear in view when page loads
+  const { ref } = useSectionInView({ sectionName: 'About', threshold: 0.9})
+  
   return (
     <motion.section
       id='about'
+      ref={ref}
       className='grid lg:grid-cols-2 lg:gap-24 w-full scroll-mt-16 sm:scroll-mt-24 lg:scroll-mt-28'
       initial={{ opacity: 0, y: 100 }}
       animate={{ opacity: 1, y: 0 }}
@@ -31,11 +36,11 @@ const About = () => {
         <Bio />
         <div className='flex justify-center lg:justify-start mt-8'>
           <TabButton
-            selectTab={() => handleTabChange('skills')}
-            active={tab === 'skills'}
+            selectTab={() => handleTabChange('technologies')}
+            active={tab === 'technologies'}
           >
             {' '}
-            Skills{' '}
+            Technologies{' '}
           </TabButton>
           <TabButton
             selectTab={() => handleTabChange('education')}
