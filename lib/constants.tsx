@@ -1,3 +1,5 @@
+import { createElement } from "react";
+
 // Project Images
 import website from "@/public/img/projects/website.png";
 import amazone from "@/public/img/projects/amazone.png";
@@ -5,6 +7,13 @@ import lok from "@/public/img/projects/lok.png";
 import filmdex from "@/public/img/projects/filmdex.png";
 import generator from "@/public/img/projects/readme-generator.png";
 import pokédex from "@/public/img/projects/pokemon.png";
+
+// Experience Icons
+import { GiGraduateCap as Cap } from "react-icons/gi";
+import { FaSquarespace as Squarespace } from "react-icons/fa6";
+import { PiCertificateFill as Certificate } from "react-icons/pi";
+import { IoLogoJavascript as JS } from "react-icons/io5";
+import { SiNextdotjs as Next } from "react-icons/si";
 
 // Brand
 export const SITE_NAME = "Jordan W. Hunter: React | Next.js Developer";
@@ -226,33 +235,76 @@ export const MENU = {
   ],
 
   skills: [
-    'HTML',
-    'CSS',
-    'JavaScript',
-    'TypeScript',
-    'React',
-    'Next.js',
-    'Tailwind',
-    'Node.js',
-    'Prismic',
-    'Prisma',
-    'MongoDB',
-    'PostgreSQL',
-    'Supabase',
-    'PlanetScale',
-    'Git',
-    'tRPC',
-    'NextAuth.js',
-    'Axios',
-    'Mongoose',
-    'Express.js',
-    'Vercel',
-    'Firebase',
-    'Stripe',
-    'Moment.js',
-    'Firestore',
-    'Inquirer.js',
-    'Pusher',
-    'Framer Motion',
+    "HTML",
+    "CSS",
+    "JavaScript",
+    "TypeScript",
+    "React",
+    "Next.js",
+    "Tailwind",
+    "Node.js",
+    "Prismic",
+    "Prisma",
+    "MongoDB",
+    "PostgreSQL",
+    "Supabase",
+    "PlanetScale",
+    "Git",
+    "tRPC",
+    "NextAuth.js",
+    "Axios",
+    "Mongoose",
+    "Express.js",
+    "Vercel",
+    "Firebase",
+    "Stripe",
+    "Moment.js",
+    "Firestore",
+    "Inquirer.js",
+    "Pusher",
+    "Framer Motion",
+  ],
+
+  experience: [
+    {
+      title: "Graduated College",
+      location: "Tampa, FL",
+      description:
+        "I graduated from the University of South Florida in December of 2016 with a bachelor's degree in Health Sciences.",
+      icon: createElement(Cap),
+      year: "2016",
+    },
+    {
+      title: "Freelance Squarespace Developer",
+      location: "St. Petersburg, FL",
+      description:
+        "I began my developer journey building small-scale websites for artists and businesses on the platform Squarespace.",
+      icon: createElement(Squarespace),
+      year: "2017",
+    },
+    {
+      title: "Graduated Coding Bootcamp",
+      location: "New York, NY",
+      description:
+        "I graduated from Columbia University's full-stack JavaScript MERN development course after months of studying.",
+      icon: createElement(Certificate),
+      year: "2020",
+    },
+    {
+      title: "Freelance Front-End Developer",
+      location: "New York, NY",
+      description:
+        "Immediately after graduating bootcamp, my expertise evolved from Squarespace templates to developing websites using React, stylesheets and APIs.",
+      icon: createElement(JS),
+      year: "2021",
+    },
+    {
+      title: "Next.js | React Developer",
+      location: "New York, NY",
+      description:
+        "After a year of working freelance, I was hired for my current role as a remote developer at a web agency called Blacktop. My stack consists of Next.js, Tailwind, Prismic or Prisma, and PostgreSQL.",
+      icon: createElement(Next),
+      year: "2022",
+    },
   ],
 } as const;
