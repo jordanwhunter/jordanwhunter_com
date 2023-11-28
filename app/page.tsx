@@ -5,11 +5,12 @@ import {
   Projects, 
   Skills, 
   Experience, 
+  Contact,
 } from '@/components/content'
 
 export default function Home() {
   return (
-    <main className='flex flex-col items-center container mx-auto pb-4 pt-8 md:pt-28'>
+    <main className="flex flex-col items-center container mx-auto pb-4 pt-8 md:pt-28">
       <Hero />
       <SectionDivider />
       <About />
@@ -19,6 +20,8 @@ export default function Home() {
       <Skills />
       <SectionDivider />
       <Experience />
+      <SectionDivider mobile={true} />
+      <Contact />
     </main>
-  )
+  );
 }
