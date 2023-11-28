@@ -14,7 +14,7 @@ const Contact = () => {
       ref={ref}
       className='scroll-mt-16 sm:scroll-mt-24 lg:scroll-mt-28'
     >
-      <SectionHeading classProps='mt-6'>Contact</SectionHeading>
+      <SectionHeading classProps='lg:mt-6'>Contact</SectionHeading>
     </section>
   )
 }
