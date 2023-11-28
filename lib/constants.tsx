@@ -12,8 +12,7 @@ import pokédex from "@/public/img/projects/pokemon.png";
 import { GiGraduateCap as Cap } from "react-icons/gi";
 import { FaSquarespace as Squarespace } from "react-icons/fa6";
 import { PiCertificateFill as Certificate } from "react-icons/pi";
-import { IoLogoJavascript as JS } from "react-icons/io5";
-import { SiNextdotjs as Next } from "react-icons/si";
+import { SiReact as React, SiNextdotjs as Next } from "react-icons/si";
 
 // Brand
 export const SITE_NAME = "Jordan W. Hunter: React | Next.js Developer";
@@ -295,7 +294,7 @@ export const MENU = {
       location: "New York, NY",
       description:
         "Immediately after graduating bootcamp, my expertise evolved from Squarespace templates to developing websites using React, stylesheets and APIs.",
-      icon: createElement(JS),
+      icon: createElement(React),
       year: "2021",
     },
     {
