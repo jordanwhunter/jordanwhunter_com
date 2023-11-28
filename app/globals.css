@@ -1,3 +1,9 @@
 @tailwind base;
 @tailwind components;
 @tailwind utilities;
+
+@media only screen and (min-width: 992px) {
+  .vertical-timeline {
+    --line-color: #e5e7eb;
+  }
+}
