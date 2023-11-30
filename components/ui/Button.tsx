@@ -1,3 +1,6 @@
+'use client'
+
+import { useActiveSection } from "@/lib/hooks";
 import type { ButtonProps } from '@/lib/types'
 import { LinkArrow, sizes, SizeKey } from '@/components/ui'
 import { AiFillLinkedin, AiFillGithub } from 'react-icons/ai'
@@ -5,6 +8,8 @@ import Link from 'next/link'
 import cn from 'classnames'
 
 const Button = ({ classProps, internal, linkedin, github, ...linkProps }: ButtonProps) => {
+  const { setActiveSection, setTimeOfLastClick } = useActiveSection()
+
   const sizeInput = linkProps.size as SizeKey
   const generic = 'px-7 py-3 flex justify-center gap-3 rounded-full border'
 
@@ -14,6 +19,10 @@ const Button = ({ classProps, internal, linkedin, github, ...linkProps }: Button
         <Link
           href={linkProps?.href ?? '#'}
           className={cn(classProps, generic)}
+          onClick={() => {
+            setActiveSection('Contact')
+            setTimeOfLastClick(Date.now())
+          }}
         >
           <LinkArrow {...linkProps} />
         </Link>
