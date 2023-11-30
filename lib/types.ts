@@ -55,6 +55,14 @@ export interface TabProps {
 // @/components/cards/Card.tsx
 export type CardProps = (typeof MENU.projects)[number]
 
+// @/components/templates/Email.tsx
+export interface EmailTemplateProps {
+  name: string;
+  mailer: string;
+  subject: string;
+  message: string;
+}
+
 // @/context/Active.tsx
 export interface ActiveContextProviderProps {
   children: ReactNode;
