@@ -1,5 +1,5 @@
 "use client";
-import {useRef} from "react";
+import {ReactElement, useRef} from "react";
 import type {CardProps} from "@/lib/types";
 import {CodeBracketIcon, EyeIcon} from "@heroicons/react/24/outline";
 import {motion, useScroll, useTransform} from "framer-motion";
@@ -12,7 +12,7 @@ export default function Card({
   image,
   href,
   repo,
-}: CardProps) {
+}: CardProps): ReactElement {
   const ref = useRef<HTMLDivElement>(null);
 
   const {scrollYProgress} = useScroll({
