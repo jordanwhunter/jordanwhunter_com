@@ -1,1 +1,1 @@
-export { default as ActiveContextProvider, ActiveSectionContext } from './Active'
+export {default as ActiveContextProvider, ActiveSectionContext} from "./Active";

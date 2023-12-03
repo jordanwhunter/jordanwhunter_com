@@ -1,5 +1,5 @@
-import { ReactNode, MouseEventHandler, Dispatch, SetStateAction } from 'react'
-import { MENU } from "@/lib/constants"
+import {ReactNode, MouseEventHandler, Dispatch, SetStateAction} from "react";
+import {MENU} from "@/lib/constants";
 
 // @/components/content/Heading.tsx
 export interface SectionHeadingProps {
@@ -53,7 +53,7 @@ export interface TabProps {
 }
 
 // @/components/cards/Card.tsx
-export type CardProps = (typeof MENU.projects)[number]
+export type CardProps = (typeof MENU.projects)[number];
 
 // @/components/templates/Email.tsx
 export interface EmailTemplateProps {
@@ -68,13 +68,13 @@ export interface ActiveContextProviderProps {
   children: ReactNode;
 }
 
-export type ActiveSectionProps = (typeof MENU.navigation[number]['name'])
+export type ActiveSectionProps = (typeof MENU.navigation)[number]["name"];
 
 export interface ActiveSectionContextProps {
-  activeSection: ActiveSectionProps
-  setActiveSection: Dispatch<SetStateAction<ActiveSectionProps>>
-  timeOfLastClick: number
-  setTimeOfLastClick: Dispatch<SetStateAction<number>>
+  activeSection: ActiveSectionProps;
+  setActiveSection: Dispatch<SetStateAction<ActiveSectionProps>>;
+  timeOfLastClick: number;
+  setTimeOfLastClick: Dispatch<SetStateAction<number>>;
 }
 
 // @/lib/hooks/useSectionInView.ts

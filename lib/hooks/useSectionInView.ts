@@ -1,14 +1,17 @@
-import { useEffect } from "react";
-import { useActiveSection } from "@/lib/hooks";
-import { useInView } from "react-intersection-observer";
-import type { SectionInViewProps } from "@/lib/types";
+import {useEffect} from "react";
+import {useActiveSection} from "@/lib/hooks";
+import {useInView} from "react-intersection-observer";
+import type {SectionInViewProps} from "@/lib/types";
 
-const useSectionInView = ({ sectionName, threshold = 0.75 }: SectionInViewProps) => {
-  const { ref, inView } = useInView({
+const useSectionInView = ({
+  sectionName,
+  threshold = 0.75,
+}: SectionInViewProps) => {
+  const {ref, inView} = useInView({
     threshold: threshold,
   });
 
-  const { setActiveSection, timeOfLastClick } = useActiveSection();
+  const {setActiveSection, timeOfLastClick} = useActiveSection();
 
   useEffect(() => {
     if (inView && Date.now() - timeOfLastClick > 1000) {
@@ -16,7 +19,7 @@ const useSectionInView = ({ sectionName, threshold = 0.75 }: SectionInViewProps)
     }
   }, [inView, setActiveSection, timeOfLastClick, sectionName]);
 
-  return { ref }
+  return {ref};
 };
 
 export default useSectionInView;

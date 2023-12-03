@@ -1,1 +1,1 @@
-export { default as EmailTemplate } from './Email'
+export {default as EmailTemplate} from "./Email";
