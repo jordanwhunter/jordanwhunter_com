@@ -1,4 +1,4 @@
-import { createElement } from "react";
+import {createElement} from "react";
 
 // Project Images
 import website from "@/public/img/projects/website.png";
@@ -9,10 +9,10 @@ import generator from "@/public/img/projects/readme-generator.png";
 import pokédex from "@/public/img/projects/pokemon.png";
 
 // Experience Icons
-import { GiGraduateCap as Cap } from "react-icons/gi";
-import { FaSquarespace as Squarespace } from "react-icons/fa6";
-import { PiCertificateFill as Certificate } from "react-icons/pi";
-import { SiReact as React, SiNextdotjs as Next } from "react-icons/si";
+import {GiGraduateCap as Cap} from "react-icons/gi";
+import {FaSquarespace as Squarespace} from "react-icons/fa6";
+import {PiCertificateFill as Certificate} from "react-icons/pi";
+import {SiReact as React, SiNextdotjs as Next} from "react-icons/si";
 
 // Brand
 export const SITE_NAME = "Jordan W. Hunter: React | Next.js Developer";
@@ -24,8 +24,7 @@ const genericButton =
   "text-gray-400 hover:text-gray-600 border-white bg-white bg-opacity-40 shadow-lg shadow-black/[0.03]";
 
 // Generic Tab Styling
-const genericTab =
-  "text-center lg:text-left text-gray-400 leading-tight";
+const genericTab = "text-center lg:text-left text-gray-400 leading-tight";
 
 // Menu and Navigation
 export const MENU = {

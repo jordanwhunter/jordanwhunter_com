@@ -6,4 +6,4 @@ const validateString = (value: unknown, maxLength: number) => {
   return true;
 };
 
-export default validateString
+export default validateString;

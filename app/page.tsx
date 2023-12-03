@@ -1,12 +1,12 @@
-import { Hero } from '@/components/hero'
-import { 
-  SectionDivider, 
-  About, 
-  Projects, 
-  Skills, 
-  Experience, 
+import {Hero} from "@/components/hero";
+import {
+  SectionDivider,
+  About,
+  Projects,
+  Skills,
+  Experience,
   Contact,
-} from '@/components/content'
+} from "@/components/content";
 
 export default function Home() {
   return (
