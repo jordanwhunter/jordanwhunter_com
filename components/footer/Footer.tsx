@@ -1,5 +1,6 @@
 const Footer = () => (
   <footer className='flex flex-col items-center text-gray-400 mb-10 px-4'>
+    {/* Date */}
     <small className='mb-2'>
       &copy; {new Date().getFullYear()} Jordan W. Hunter. All rights reserved.
     </small>
